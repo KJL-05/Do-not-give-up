@@ -53,10 +53,7 @@ namespace Do_not_give_up
             Thread.Sleep(700);
             Console.WriteLine("//////////////////////////////");
             Thread.Sleep(700);
-            for (int i = 0; i < 4; i++)
-            {
-                Console.WriteLine("");
-            }
+            AddInterval();
             var CalDay = 1;
             Thread.Sleep(700);
  //第二个场景（第1~4天）
@@ -106,12 +103,8 @@ namespace Do_not_give_up
                 }
                 Thread.Sleep(700);
                 Console.WriteLine("//////////////////////////////");
-                for (int b = 0; b < 4; b++)
-                {
-                    Thread.Sleep(500);
-                    Console.WriteLine("");
-                }
-                CalDay+=1;
+                AddInterval();
+                CalDay += 1;
             }
             Thread.Sleep(700);
             BranchSelection BranchSelection = new BranchSelection();
@@ -155,11 +148,7 @@ namespace Do_not_give_up
             Thread.Sleep(700);
             Console.WriteLine("//////////////////////////////");
             Thread.Sleep(700);
-            for (int b = 0; b < 4; b++)
-            {
-                Thread.Sleep(500);
-                Console.WriteLine("");
-            }
+            AddInterval();
             Thread.Sleep(700);
 //第四个场景  第一次抉择 2个选项
             Console.WriteLine("//////////////////////////////");
@@ -221,11 +210,7 @@ namespace Do_not_give_up
             }
             Console.WriteLine("//////////////////////////////");
             Thread.Sleep(700);
-            for (int b = 0; b < 4; b++)
-            {
-                Thread.Sleep(100);
-                Console.WriteLine("");
-            }
+            AddInterval();
             Thread.Sleep(700);
 //第五个场景  第二次抉择  5个选项
             Console.WriteLine("//////////////////////////////");
@@ -275,11 +260,7 @@ namespace Do_not_give_up
             }
             Console.WriteLine("//////////////////////////////");
             Thread.Sleep(700);
-            for (int b = 0; b < 4; b++)
-            {
-                Thread.Sleep(500);
-                Console.WriteLine("");
-            }
+            AddInterval();
             Thread.Sleep(700);
 //第六个场景   第三次抉择   10个选项
             Console.WriteLine("//////////////////////////////");
@@ -336,11 +317,7 @@ namespace Do_not_give_up
             }
             Console.WriteLine("//////////////////////////////");
             Thread.Sleep(700);
-            for (int b = 0; b < 4; b++)
-            {
-                Thread.Sleep(500);
-                Console.WriteLine("");
-            }
+            AddInterval();
             Thread.Sleep(700);
 //第七个场景   第四次抉择   15个选项
             Console.WriteLine("//////////////////////////////");
@@ -410,11 +387,7 @@ namespace Do_not_give_up
             Thread.Sleep(700);
             Console.WriteLine("//////////////////////////////");
             Thread.Sleep(700);
-            for (int b = 0; b < 4; b++)
-            {
-                Thread.Sleep(500);
-                Console.WriteLine("");
-            }
+            AddInterval();
             Thread.Sleep(700);
  //第八个场景   穿越了   
             Console.WriteLine("//////////////////////////////");
@@ -435,11 +408,7 @@ namespace Do_not_give_up
             Thread.Sleep(700);
             Console.WriteLine("//////////////////////////////");
             Thread.Sleep(700);
-            for (int b = 0; b < 4; b++)
-            {
-                Thread.Sleep(500);
-                Console.WriteLine("");
-            }
+            AddInterval();
             Thread.Sleep(700);
 //第九个场景   神器选定
             Console.WriteLine("//////////////////////////////");
@@ -521,11 +490,7 @@ namespace Do_not_give_up
             Thread.Sleep(700);
             Console.WriteLine("//////////////////////////////");
             Thread.Sleep(6000);
-            for (int b = 0; b < 4; b++)
-            {
-                Thread.Sleep(400);
-                Console.WriteLine("");
-            }
+            AddInterval();
             Thread.Sleep(700);
  //第十个场景   进入世界   向前走（将剧情固定，不再做分支）
             Console.WriteLine("//////////////////////////////");
@@ -541,11 +506,7 @@ namespace Do_not_give_up
             Thread.Sleep(600);
             Console.WriteLine("//////////////////////////////");
             Thread.Sleep(6000);
-            for (int b = 0; b < 4; b++)
-            {
-                Thread.Sleep(400);
-                Console.WriteLine("");
-            }
+            AddInterval();
             Thread.Sleep(700);
 
             Console.WriteLine("//////////////////////////////");
@@ -572,11 +533,7 @@ namespace Do_not_give_up
             Thread.Sleep(700);
             Console.WriteLine("你不自觉地走上前去，触碰到了魔法阵，如同魔药店那一幕，有一道封印解除了");
             Thread.Sleep(700);
-            for (int b = 0; b < 4; b++)
-            {
-                Thread.Sleep(400);
-                Console.WriteLine("");
-            }
+            AddInterval();
             Console.WriteLine("接下来的几天时间，你都与阿珍做着决战的准备，同时也在城镇中寻找最后一座魔法阵" +
                 "\r\n" +
                 "可是一连几天，直到所有护卫着“抑郁”（Boss）的恶魔全部被消灭也没能找到");
@@ -654,11 +611,7 @@ namespace Do_not_give_up
             }
             Console.WriteLine("//////////////////////////////");
             Thread.Sleep(6000);
-            for (int b = 0; b < 4; b++)
-            {
-                Thread.Sleep(400);
-                Console.WriteLine("");
-            }
+            AddInterval();
             Thread.Sleep(700);
 
             Console.WriteLine("//////////////////////////////");
@@ -672,10 +625,7 @@ namespace Do_not_give_up
             Console.WriteLine("似乎是感受到了你坚定的内心，Boss亦是严肃了起来");
             Thread.Sleep(700);
             Console.WriteLine("“你是一个值得认真对待的对手，记住我的名字：TANYONG，来吧，与我决战在这世界之巅，胜者决定世界的命运”");
-            for(int i = 0; i < 3; i++)
-            {
-                Console.WriteLine("");
-            }
+            AddInterval();
             if (people.Equipment == 1)
             {
                 Console.WriteLine("你紧握着“誓约胜利之剑”,与TANYONG开始了激战，但是一番大战下来，你已经筋疲力尽，无论是魔药，还是神器的技能都已经用尽了" +
@@ -719,6 +669,14 @@ namespace Do_not_give_up
                 }
             }
             while (true);
+        }
+        public static void AddInterval()
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                Console.WriteLine("");
+            }
+
         }
     }
 
